@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $main-text-ff, sans-serif;
+  color: $main-text-color;
+}
+
+img {
+  display: block;
+}
+
+:focus,
+:focus-within {
+  outline: none;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 94px 0;
+}
+
+.link {
+  color: $main-text-color;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  transition: 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list {
+  list-style: none;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}

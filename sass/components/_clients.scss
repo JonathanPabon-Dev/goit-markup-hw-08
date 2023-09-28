@@ -1,0 +1,36 @@
+.clients {
+  &__title {
+    margin: 0 0 50px 0;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+  }
+  &__list {
+    @include createFlex;
+    gap: 30px;
+    .client {
+      &__link {
+        @include createFlex;
+        width: 170px;
+        height: 81px;
+        border: 1px solid $icon-color-default;
+        color: $icon-color-default;
+        border-radius: 4px;
+        transition: 250ms linear;
+        transition-timing-function: $cubic;
+        &:hover,
+        &:focus,
+        &:focus-within {
+          color: $highlighted-color;
+          border-color: $highlighted-color;
+        }
+      }
+      &__icon {
+        width: 106px;
+        fill: currentColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+
+@import 'components/base';
+@import 'components/logo';
+@import 'components/social';
+@import 'components/header';
+@import 'components/footer';
+
+// Estudio
+@import 'components/hero';
+@import 'components/modal';
+@import 'components/targets';
+@import 'components/services';
+@import 'components/team';
+@import 'components/clients';
+
+// Portfolio
+@import 'components/portfolio';

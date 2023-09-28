@@ -1,0 +1,53 @@
+.header {
+  @include createFlex;
+  height: 80px;
+  border: 1px solid $border-color;
+  &__container {
+    @include createFlex($justify: space-between);
+  }
+  &__navbar {
+    display: flex;
+  }
+  .navbar {
+    &__logo {
+      margin-right: 93px;
+    }
+    &__list {
+      @include createFlex;
+      gap: 50px;
+    }
+    &__link {
+      &:hover,
+      &:focus,
+      &:focus-within {
+        color: $highlighted-color;
+      }
+      &--active {
+        color: $highlighted-color;
+        &::after {
+          content: '';
+          position: relative;
+          top: 29px;
+          display: block;
+          height: 4px;
+          background-color: $highlighted-color;
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+  .contacts {
+    &__link {
+      @include createFlex;
+      color: $second-text-color;
+      &:hover {
+        color: $highlighted-color;
+        fill: $highlighted-color;
+      }
+    }
+    &__icon {
+      fill: currentColor;
+      margin-right: 10px;
+    }
+  }
+}

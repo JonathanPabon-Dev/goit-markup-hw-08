@@ -1,0 +1,31 @@
+.social {
+  &__list {
+    @include createFlex;
+    gap: 10px;
+  }
+  &__link {
+    @include createFlex;
+    width: 44px;
+    height: 44px;
+    background-color: $white;
+    color: $icon-color-default;
+    border-radius: 50px;
+    transition: 250ms linear;
+    transition-timing-function: $cubic;
+    &:hover,
+    &:focus,
+    &:focus-within {
+      background-color: $highlighted-color;
+      color: $white;
+    }
+    &--footer {
+      background-color: $white-o10;
+      color: $white;
+    }
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+}
