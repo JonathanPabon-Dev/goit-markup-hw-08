@@ -2,7 +2,7 @@
   background-color: $main-bg-color;
   &__container {
     display: flex;
-    column-gap: 70px;
+    justify-content: space-between;
   }
   &__address {
     padding: 60px 0;
@@ -39,7 +39,6 @@
         color: $white;
         text-transform: uppercase;
       }
-      
     }
   }
   &__suscribe {

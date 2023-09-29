@@ -1,23 +1,34 @@
 .hero {
   background-color: $main-bg-color;
-  padding: 200px 0;
+  padding: 118px 0;
   background-image: linear-gradient(rgba(47 48 58 / 0.4), rgba(47 48 58 / 0.4)),
     url(../images/hero-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+  }
+
   &__container {
     @include createFlex($direction: column);
   }
   &__title {
-    width: 696px;
+    width: 360px;
     margin-bottom: 30px;
-    font-size: 44px;
+    font-size: 26px;
     font-weight: 900;
-    line-height: 1.36;
+    line-height: 1.62;
     letter-spacing: 0.06em;
     text-align: center;
     color: $white;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 1200px) {
+      width: 696px;
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
   &__btn {
     padding: 10px 32px;
