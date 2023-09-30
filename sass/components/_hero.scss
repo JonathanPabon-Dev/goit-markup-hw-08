@@ -1,4 +1,5 @@
 .hero {
+  min-width: 480px;
   background-color: $main-bg-color;
   padding: 118px 0;
   background-image: linear-gradient(rgba(47 48 58 / 0.4), rgba(47 48 58 / 0.4)),
@@ -6,12 +7,14 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
   @media screen and (min-width: 1200px) {
     padding: 200px 0;
   }
 
   &__container {
-    @include createFlex($direction: column);
+    @include centerFlex;
+    flex-direction: column;
   }
   &__title {
     width: 360px;

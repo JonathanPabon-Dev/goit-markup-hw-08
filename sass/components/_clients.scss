@@ -1,20 +1,24 @@
 .clients {
   &__title {
-    margin: 0 0 50px 0;
+    margin-bottom: 30px;
     text-align: center;
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 700;
-    line-height: 1.17;
     letter-spacing: 0.03em;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
   }
   &__list {
-    @include createFlex;
+    @include centerFlex;
+    flex-wrap: wrap;
     gap: 30px;
     .client {
       &__link {
-        @include createFlex;
-        width: 170px;
-        height: 81px;
+        @include centerFlex;
+        padding: 15px 51px;
         border: 1px solid $icon-color-default;
         color: $icon-color-default;
         border-radius: 4px;
@@ -26,9 +30,18 @@
           color: $highlighted-color;
           border-color: $highlighted-color;
         }
+
+        @media screen and (min-width: 768px) {
+          padding: 15px 59px;
+        }
+
+        @media screen and (min-width: 1200px) {
+          padding: 15px 31px;
+        }
       }
       &__icon {
         width: 106px;
+        height: 60px;
         fill: currentColor;
       }
     }

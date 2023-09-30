@@ -1,11 +1,20 @@
 .footer {
   background-color: $main-bg-color;
   &__container {
-    display: flex;
-    justify-content: space-between;
-  }
-  &__address {
-    padding: 60px 0;
+    @include createFlex($align: center, $direction: column);
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      justify-content: space-around;
+      align-items: flex-start;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: 1200px) {
+      justify-content: space-between;
+      text-align: start;
+    }
   }
   .address {
     margin-top: 6px;
@@ -29,7 +38,12 @@
     }
   }
   &__social {
-    padding-top: 72px;
+    padding-top: 60px;
+
+    @media screen and (min-width: 768px) {
+      padding-top: 12px;
+    }
+
     .social {
       &__title {
         padding-bottom: 20px;
@@ -42,7 +56,12 @@
     }
   }
   &__suscribe {
-    padding-top: 72px;
+    padding-top: 60px;
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 12px;
+    }
+
     .suscribe {
       &__title {
         padding-bottom: 20px;
@@ -53,26 +72,33 @@
         text-transform: uppercase;
       }
       &__form {
-        display: flex;
-        gap: 12px;
+        @include centerFlex;
+        flex-direction: column;
+        gap: 20px;
+
+        @media screen and (min-width: 1200px) {
+          flex-direction: row;
+          gap: 12px;
+        }
       }
       &__input {
-        width: 358px;
-        height: 50px;
-        padding: 0 16px;
+        width: 450px;
+        padding: 15px 16px;
         line-height: 1.25;
         background: none;
         color: $white;
         border-radius: 4px;
         border: 1px solid $white-o30;
         box-shadow: 0px 4px 4px 0px $black-o15;
+
+        @media screen and (min-width: 1200px) {
+          width: 358px;
+        }
       }
       &__btn {
         width: 200px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        padding: 10px 0;
+        @include centerFlex;
         gap: 20px;
         border-radius: 4px;
         background-color: $highlighted-color;

@@ -1,4 +1,11 @@
 .services {
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+    padding-top: 0;
+  }
+
   &__title {
     margin: 0 0 50px 0;
     text-align: center;
@@ -8,7 +15,7 @@
     letter-spacing: 0.03em;
   }
   &__list {
-    @include createFlex;
+    @include centerFlex;
     gap: 30px;
     .service {
       &__item {

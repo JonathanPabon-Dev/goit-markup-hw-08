@@ -1,26 +1,46 @@
 .targets {
-  padding-bottom: 0;
   &__list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
   }
   .target {
     &__item {
-      width: 270px;
+      @include createFlex($align: center, $direction: column);
+      width: 100%;
+      text-align: center;
+
+      @media screen and (min-width: 768px) {
+        width: 354px;
+        align-items: flex-start;
+        text-align: start;
+      }
+
+      @media screen and (min-width: 1200px) {
+        width: 270px;
+      }
     }
     &__icon {
-      padding: 25px 100px;
+      padding: 25px 190px;
       margin-bottom: 30px;
       background-color: $third-bg-color;
       border-radius: 4px;
+
+      @media screen and (min-width: 768px) {
+        padding: 25px 142px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        padding: 25px 100px;
+      }
     }
     &__title {
       margin-bottom: 10px;
       font-size: 14px;
       font-weight: 700;
-      line-height: 1.17;
       letter-spacing: 0.03em;
+      text-transform: uppercase;
     }
     &__description {
       font-size: 14px;

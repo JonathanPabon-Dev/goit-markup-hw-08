@@ -1,8 +1,14 @@
-@mixin createFlex($align: center, $justify: center, $direction: row) {
+@mixin createFlex($align: flex-start, $justify: flex-start, $direction: row) {
   display: flex;
   align-items: $align;
   justify-content: $justify;
   @if $direction != row {
     flex-direction: $direction;
   }
+}
+
+@mixin centerFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

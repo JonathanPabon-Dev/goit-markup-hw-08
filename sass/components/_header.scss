@@ -1,9 +1,9 @@
 .header {
-  @include createFlex;
+  @include centerFlex;
   height: 80px;
   border: 1px solid $border-color;
   &__container {
-    @include createFlex($justify: space-between);
+    @include createFlex($align: center, $justify: space-between);
   }
   &__navbar {
     display: flex;
@@ -13,7 +13,7 @@
       margin-right: 93px;
     }
     &__list {
-      @include createFlex;
+      @include centerFlex;
       gap: 50px;
     }
     &__link {
@@ -38,7 +38,7 @@
   }
   .contacts {
     &__link {
-      @include createFlex;
+      @include centerFlex;
       color: $second-text-color;
       &:hover {
         color: $highlighted-color;
