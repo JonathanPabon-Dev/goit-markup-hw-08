@@ -1,0 +1,115 @@
+.menu {
+  &-toggle {
+    @include centerFlex;
+    padding: 12px 8px;
+    background-color: transparent;
+    border: none;
+    fill: inherit;
+
+    &:hover,
+    &:focus,
+    &:focus-within,
+    &:focus-visible {
+      fill: $highlighted-color;
+    }
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 50px 40px;
+    background-color: $white;
+
+    transform: translateX(100%);
+    transition: transform 250ms $cubic;
+
+    &.is-open {
+      transform: translateX(0);
+    }
+
+    & .menu-toggle {
+      position: absolute;
+      padding: 0;
+      top: 10px;
+      right: 15px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+  }
+
+  &__link {
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+
+    &--active,
+    &:hover,
+    &:focus,
+    &:focus-visible,
+    &:focus-within {
+      color: $highlighted-color;
+    }
+  }
+
+  &-contacts {
+    &__list {
+      display: flex;
+      flex-direction: column;
+      margin-top: auto;
+      margin-bottom: 64px;
+      row-gap: 32px;
+    }
+    &__link {
+      color: $second-text-color;
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      &--active {
+        color: $highlighted-color;
+        font-size: 34px;
+      }
+    }
+  }
+
+  &-social {
+    &__list {
+      display: flex;
+    }
+    &__item {
+      border-right: 1px solid $main-text-color-o20;
+      list-style: none outside none;
+      padding: 0 10px;
+      width: auto;
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        border-right: none;
+        padding-right: 0;
+      }
+    }
+
+    &__link {
+      color: #2196f3;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.22;
+      letter-spacing: 0.36px;
+    }
+  }
+}
