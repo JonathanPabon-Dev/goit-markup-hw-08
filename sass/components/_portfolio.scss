@@ -1,8 +1,9 @@
 .portfolio {
   .filters {
     &__list {
-      @include createFlex;
-      gap: 8px;
+      @include centerFlex;
+      flex-wrap: wrap;
+      gap: 15px 8px;
       margin-bottom: 50px;
     }
     &__btn {
@@ -29,11 +30,19 @@
       gap: 30px;
     }
     &__card {
-      width: 370px;
+      width: 450px;
       height: fit-content;
       cursor: pointer;
       transition: 250ms linear;
       transition-timing-function: $cubic;
+
+      @media screen and (min-width: 768px) {
+        width: 354px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        width: 370px;
+      }
       &:hover,
       &:focus,
       &:focus-within {
@@ -46,22 +55,38 @@
       }
       .card {
         &__container {
-          width: 370px;
+          width: 450px;
           height: 294px;
           overflow: hidden;
+
+          @media screen and (min-width: 768px) {
+            width: 354px;
+          }
+
+          @media screen and (min-width: 1200px) {
+            width: 370px;
+          }
         }
         &__img {
           object-fit: cover;
         }
         &__description {
-          @include createFlex;
-          padding: 0 24px;
-          width: 370px;
+          @include centerFlex;
+          padding: 24px;
+          width: 450px;
           height: 294px;
           color: $white;
           background-color: $highlighted-bg-card;
           transition: 250ms linear;
           transition-timing-function: $cubic;
+
+          @media screen and (min-width: 768px) {
+            width: 354px;
+          }
+
+          @media screen and (min-width: 1200px) {
+            width: 370px;
+          }
         }
         &__text {
           font-size: 18px;
