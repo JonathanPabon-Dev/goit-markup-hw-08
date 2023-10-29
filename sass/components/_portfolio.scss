@@ -25,7 +25,6 @@
   .gallery {
     &__list {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
       gap: 30px;
     }
@@ -67,8 +66,18 @@
             width: 370px;
           }
         }
-        &__img {
+        &__image {
+          width: 450px;
+          height: 294px;
           object-fit: cover;
+
+          @media screen and (min-width: 768px) {
+            width: 354px;
+          }
+
+          @media screen and (min-width: 1200px) {
+            width: 370px;
+          }
         }
         &__description {
           @include centerFlex;
